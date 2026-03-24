@@ -43,6 +43,7 @@ Agents are specialized subprocesses Claude can spin up mid-conversation. Invoke 
 |---|---|
 | `code-reviewer` | Reviews code for bugs, security, performance, and quality — outputs a structured checklist |
 | `refactor` | Refactors code for clarity and maintainability without changing behavior |
+| `pr-improver` | Orchestrates a full review-and-fix cycle: reviews the branch, applies all safe fixes, runs tests, and reports |
 
 ## 🎯 Skills
 
@@ -58,6 +59,7 @@ Skills are slash commands that expand into full prompts. Invoke them by typing `
 | Frontend Design | `/frontend-design` | Creates polished React interfaces with high design quality |
 | Map Project | `/map-project` | Scans the project and generates a `CLAUDE.md` with full context |
 | Sync Memory | `/sync-memory` | Updates `CLAUDE.md` after structural changes to the project |
+| Fix PR | `/fix-pr` | Reviews the PR and applies all safe fixes directly to the files |
 | Readme | `/readme` | Creates or updates this README |
 
 ## 📁 Project Structure
@@ -66,7 +68,8 @@ Skills are slash commands that expand into full prompts. Invoke them by typing `
 .claude/
 ├── agents/
 │   ├── code-reviewer/    # AGENT.md — code review specialist
-│   └── refactor/         # AGENT.md — refactoring specialist
+│   ├── refactor/         # AGENT.md — refactoring specialist
+│   └── pr-improver/      # AGENT.md — review + fix orchestrator
 └── skills/
     ├── commit/            # SKILL.md
     ├── review-pr/         # SKILL.md
@@ -76,6 +79,7 @@ Skills are slash commands that expand into full prompts. Invoke them by typing `
     ├── frontend-design/   # SKILL.md
     ├── map-project/       # SKILL.md
     ├── sync-memory/       # SKILL.md
+    ├── fix-pr/            # SKILL.md
     └── readme/            # SKILL.md
 install.sh                 # symlinks everything into ~/.claude/
 ```
