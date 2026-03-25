@@ -1,7 +1,6 @@
 ---
 name: frontend-design
 description: Create distinctive, production-grade React interfaces with high design quality. Use this skill when the user asks to build React components, pages, or applications (examples include landing pages, dashboards, component libraries, or when styling/beautifying any React UI). Generates creative, polished JSX/TSX code that avoids generic AI aesthetics.
-allowed-tools: Read, Glob, Grep
 ---
 
 This skill guides creation of distinctive, production-grade React interfaces that avoid generic "AI slop" aesthetics. Implement real working React code with exceptional attention to aesthetic details and creative choices.

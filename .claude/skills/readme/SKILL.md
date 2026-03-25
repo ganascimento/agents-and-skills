@@ -1,7 +1,6 @@
 ---
 name: readme
 description: Creates or updates a README.md for the project. Generates a clean, visually appealing README with icons, essential sections, and good structure — not exhaustive docs, just what matters.
-allowed-tools: Read, Glob, Grep, Bash, Write, Edit
 ---
 
 Create or update the project's `README.md`. The goal is a README that looks great, communicates clearly, and covers exactly what someone needs — nothing more.

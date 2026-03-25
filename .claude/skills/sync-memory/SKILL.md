@@ -1,7 +1,6 @@
 ---
 name: sync-memory
 description: Updates CLAUDE.md based on recent changes to the project. Run after adding new libraries, changing conventions, refactoring structure, or updating the design system. Keeps project context accurate without a full re-scan.
-allowed-tools: Read, Glob, Grep, Bash, Edit
 ---
 
 Update the existing `CLAUDE.md` to reflect recent changes in the project. Do not rewrite everything — surgically update only the sections that are outdated.

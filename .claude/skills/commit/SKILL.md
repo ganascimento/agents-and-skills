@@ -1,7 +1,6 @@
 ---
 name: commit
 description: Generates a commit message based on staged changes and commits. Run after staging files with git add.
-allowed-tools: Bash
 ---
 
 Generate a commit message for the staged changes and commit them.

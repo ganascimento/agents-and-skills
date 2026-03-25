@@ -4,9 +4,7 @@ set -euo pipefail
 REPO_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 CLAUDE_DIR="$HOME/.claude"
 
-AGENTS_SRC="$REPO_DIR/.claude/agents"
 SKILLS_SRC="$REPO_DIR/.claude/skills"
-AGENTS_DST="$CLAUDE_DIR/agents"
 SKILLS_DST="$CLAUDE_DIR/skills"
 
 link_items() {
@@ -37,9 +35,8 @@ link_items() {
   done
 }
 
-echo "Installing agents and skills from $REPO_DIR"
+echo "Installing skills from $REPO_DIR"
 echo ""
-link_items "$AGENTS_SRC" "$AGENTS_DST" "agent"
 link_items "$SKILLS_SRC" "$SKILLS_DST" "skill"
 echo ""
 echo "Done. Restart Claude Code or run /reload-plugins to apply."
